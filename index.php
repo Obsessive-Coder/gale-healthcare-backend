@@ -13,7 +13,7 @@ $recText = $_POST['text'];
 $query = "INSERT INTO user(username) VALUES('$recText')";
 
 if (mysqli_query($connection, $query)) {
-  echo 'Added new user';
+  echo 'Added new user.';
 } else {
-  echo 'Error adding new user';
+  echo 'Error adding new user.';
 }
