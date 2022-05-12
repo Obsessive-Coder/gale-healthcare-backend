@@ -29,29 +29,16 @@ class Router
     $this->{$lowerName}[$formattedRoute] = $method;
   }
 
-  /**
-   * Removes trailing forward slashes from the right of the route.
-   * @param route (string)
-   */
-  private function formatRoute($route)
-  {
-    $result = rtrim($route, '/');
-    if ($result === '') {
-      return '/';
-    }
-    return $result;
-  }
-
   // Sends a 405 of unsupported request methods.
   private function invalidMethodHandler()
   {
-    header("{$this->request->serverProtocol} 405 Method Not Allowed");
+    header('{$this->request->serverProtocol} 405 Method Not Allowed');
   }
 
   // Sends a 404 for unknown routes.
   private function defaultRequestHandler()
   {
-    header("{$this->request->serverProtocol} 404 Not Found");
+    header('{$this->request->serverProtocol} 404 Not Found');
   }
 
   /**

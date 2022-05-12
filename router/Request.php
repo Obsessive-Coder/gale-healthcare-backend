@@ -11,7 +11,6 @@ class Request implements IRequest
     }
   }
 
-
   /**
    * Build the body 'object' from the POST request.
    * @param route (string)
