@@ -6,12 +6,6 @@ include_once 'util/Solutions.php';
 
 $router = new Router(new Request);
 
-$router->get('/', function () {
-  return <<<HTML
-  <h1>Hello world</h1>
-HTML;
-});
-
 $router->get('/question1', function ($request) {
   return Solutions::question1();
 });
