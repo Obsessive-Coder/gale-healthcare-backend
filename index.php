@@ -2,6 +2,8 @@
 
 include_once 'router/Request.php';
 include_once 'router/Router.php';
+include_once 'util/Solutions.php';
+
 $router = new Router(new Request);
 
 $router->get('/', function () {
@@ -10,10 +12,8 @@ $router->get('/', function () {
 HTML;
 });
 
-$router->get('/profile', function ($request) {
-  return <<<HTML
-  <h1>Profile</h1>
-HTML;
+$router->get('/question1', function ($request) {
+  return Solutions::question1();
 });
 
 $router->post('/data', function ($request) {
