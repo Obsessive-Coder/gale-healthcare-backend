@@ -18,7 +18,7 @@ class Question_6 {
     const numbers = this.getNumbers();
     const duplicateNumbers = this.getDuplicates(numbers);
 
-    // Sort the duplicates in ascending order;
+    // Sort the duplicates in ascending order.
     duplicateNumbers.sort((a, b) => a - b);
 
     return duplicateNumbers;
@@ -36,14 +36,13 @@ class Question_6 {
 
       // Get a number 0 or 1. If 1 then reuse the number, else make new number.
       const isDuplicate = Math.floor(Math.random() * 2) > 0;
-      number = isDuplicate ? number : Math.floor(Math.random() * 999999);
+      if (!isDuplicate) {
+        number = Math.floor(Math.random() * 999999);
+      }
 
       // Increment count for array length.
       count++;
     } while (count < 200);
-
-    // Randomize the numbers since they're built in order and part of the challenge is to sort the duplicates.
-    numbers.sort(() => { return Math.random() - 0.5 });
 
     return numbers;
   }
@@ -60,7 +59,7 @@ class Question_6 {
       for (let j = 0; j < numbers.length; j++) {
         const secondNumber = numbers[j];
 
-        // Add to the duplicates if they're different indices and the same number.
+        // Add to the duplicate if it's different indices and the same number.
         const isDifferentIndex = i !== j;
         const isSameNumber = firstNumber === secondNumber;
 
