@@ -4,7 +4,7 @@ include_once 'IQuestion.php';
 
 class Question_2 implements IQuestion
 {
-  public static function solve()
+  public function solve()
   {
     // DB Options.
     $host = 'localhost';

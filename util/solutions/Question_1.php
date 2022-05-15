@@ -6,7 +6,7 @@ const PROBLEM_DATA = 'Thethe rain in spainspain falls mainly in the plainplain. 
 
 class Question_1 implements IQuestion
 {
-  public static function solve()
+  public function solve()
   {
     // Split the sentences into words.
     $sentences = explode(' ', PROBLEM_DATA);

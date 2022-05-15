@@ -1,5 +1,5 @@
 <?php
 interface IQuestion
 {
-  public static function solve();
+  public function solve();
 }
