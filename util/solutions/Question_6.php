@@ -17,7 +17,7 @@ class Question_6 implements IQuestion
     $duplicateNumbers = $this->getDuplicates($numbers);
 
     // Sort the duplicates in ascending order.
-    sort($duplicateNumbers, SORT_NATURAL);
+    sort($duplicateNumbers);
 
     echo json_encode($duplicateNumbers);
   }
