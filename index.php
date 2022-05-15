@@ -8,6 +8,9 @@ include_once 'util/solutions/Question_3.php';
 include_once 'util/solutions/Question_4.php';
 include_once 'util/solutions/Question_5.php';
 include_once 'util/solutions/Question_6.php';
+include_once 'util/solutions/Question_7.php';
+include_once 'util/solutions/Question_8.php';
+include_once 'util/solutions/Question_9.php';
 
 // Used below to bind routes to their handlers.
 const ROUTES = array(
@@ -17,6 +20,9 @@ const ROUTES = array(
   'question4' => new Question_4(),
   'question5' => new Question_5(),
   'question6' => new Question_6(),
+  'question7' => new Question_7(),
+  'question8' => new Question_8(),
+  'question9' => new Question_9(),
 );
 
 $router = new Router(new Request);
