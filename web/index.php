@@ -26,12 +26,10 @@ const ROUTES = array(
   'question9' => new Question_9(),
 );
 
-// $app = new Silex\Application();
+$app = new Silex\Application();
 
 foreach (ROUTES as $key =>  $RouteHandler) {
-  // $app->get('/' . $key, fn () => $RouteHandler->solve());
-
-  $router->get('/profile', fn ($request) => $RouteHandler->solve());
+  $app->get('/' . $key, fn () => $RouteHandler->solve());
 }
 
 $app->run();
