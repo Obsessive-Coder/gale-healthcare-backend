@@ -19,7 +19,7 @@ class Question_6 implements IQuestion
     // Sort the duplicates in ascending order.
     sort($duplicateNumbers);
 
-    echo json_encode($duplicateNumbers);
+    return json_encode($duplicateNumbers);
   }
 
   private function getNumbers()

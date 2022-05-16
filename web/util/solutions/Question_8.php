@@ -6,7 +6,7 @@ class Question_8 implements IQuestion
 {
   public function solve()
   {
-    echo 'I have never made a url shortener so I wouldn\'t be able to write the function without first following a tutorial. I am all about tutorials and followed several for the PHP portions of these challenges. However, I feel this would be too specific and I would use too much of the code from the tutorial.
+    return 'I have never made a url shortener so I wouldn\'t be able to write the function without first following a tutorial. I am all about tutorials and followed several for the PHP portions of these challenges. However, I feel this would be too specific and I would use too much of the code from the tutorial.
 
     Considering this, I still did some research and feel that I understand enough to describe a large portion of the steps required to achieve this.
     

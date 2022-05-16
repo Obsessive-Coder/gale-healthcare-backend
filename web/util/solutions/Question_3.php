@@ -18,7 +18,7 @@ class Question_3 implements IQuestion
     $finalQuestions = array_merge($firstQuestions, $randomQuestions);
     shuffle($finalQuestions);
 
-    echo json_encode($finalQuestions);
+    return json_encode($finalQuestions);
   }
 
   private function getQuestionNumbers()

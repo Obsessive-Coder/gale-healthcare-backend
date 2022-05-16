@@ -41,9 +41,9 @@ class Question_2 implements IQuestion
         }
       }
 
-      echo json_encode($finalUsers);
+      return json_encode($finalUsers);
     } else {
-      echo 'Error querying the database';
+      return 'Error querying the database';
     }
   }
 }

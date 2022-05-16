@@ -6,6 +6,6 @@ class Question_9 implements IQuestion
 {
   public function solve()
   {
-    echo 'TODO: Solve Question 9';
+    return 'TODO: Solve Question 9';
   }
 }
