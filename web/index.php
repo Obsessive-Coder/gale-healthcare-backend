@@ -1,7 +1,7 @@
 <?php
 
-include_once 'router/Request.php';
-include_once 'router/Router.php';
+require('../vendor/autoload.php');
+
 include_once 'util/solutions/Question_1.php';
 include_once 'util/solutions/Question_2.php';
 include_once 'util/solutions/Question_3.php';
@@ -25,16 +25,10 @@ const ROUTES = array(
   'question9' => new Question_9(),
 );
 
-$router = new Router(new Request);
+$app = new Silex\Application();
 
-$router->get('/question99', function ($request) {
-  echo 'Hello Coder';
-});
-
-foreach (ROUTES as $key => $RouteHandler) {
-  $router->get('/' . $key, fn ($request) => $RouteHandler->solve());
+foreach (ROUTES as $key =>  $RouteHandler) {
+  $app->get('/' . $key, fn () => $RouteHandler->solve());
 }
 
-$router->post('/data', function ($request) {
-  return json_encode($request->getBody());
-});
+$app->run();
