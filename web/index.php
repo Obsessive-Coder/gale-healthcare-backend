@@ -1,7 +1,8 @@
 <?php
 
 require('../vendor/autoload.php');
-
+include_once 'router/Request.php';
+include_once 'router/Router.php';
 include_once 'util/solutions/Question_1.php';
 include_once 'util/solutions/Question_2.php';
 include_once 'util/solutions/Question_3.php';
@@ -25,10 +26,12 @@ const ROUTES = array(
   'question9' => new Question_9(),
 );
 
-$app = new Silex\Application();
+// $app = new Silex\Application();
 
 foreach (ROUTES as $key =>  $RouteHandler) {
-  $app->get('/' . $key, fn () => $RouteHandler->solve());
+  // $app->get('/' . $key, fn () => $RouteHandler->solve());
+
+  $router->get('/profile', fn ($request) => $RouteHandler->solve());
 }
 
 $app->run();
