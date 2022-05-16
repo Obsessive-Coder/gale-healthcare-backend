@@ -32,4 +32,8 @@ foreach (ROUTES as $key =>  $RouteHandler) {
   $app->get('/' . $key, fn () => $RouteHandler->solve());
 }
 
+$app->after(function ($request, $response) {
+  $response->headers->set('Access-Control-Allow-Origin', '*');
+});
+
 $app->run();
