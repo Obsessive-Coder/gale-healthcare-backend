@@ -35,8 +35,8 @@ foreach (ROUTES as $key =>  $RouteHandler) {
   });
 }
 
-$app->after(function ($request, $response) {
-  $response->headers->set('Access-Control-Allow-Origin', '*');
-});
+// $app->after(function ($request, $response) {
+//   $response->headers->set('Access-Control-Allow-Origin', '*');
+// });
 
 $app->run();
