@@ -29,7 +29,9 @@ const ROUTES = array(
 $app = new Silex\Application();
 
 foreach (ROUTES as $key =>  $RouteHandler) {
-  $app->get('/' . $key, fn () => $RouteHandler->solve());
+  $app->get('/' . $key, function ($request, $response) use ($RouteHandler) {
+    $response->headers->set('Access-Control-Allow-Origin', '*');
+  });
 }
 
 $app->after(function ($request, $response) {
