@@ -30,7 +30,7 @@ $app = new Silex\Application();
 
 foreach (ROUTES as $key =>  $RouteHandler) {
   $app->get('/' . $key, function ($request, $response) use ($RouteHandler) {
-    $response->headers->set('Access-Control-Allow-Origin', '*');
+    // $response->headers->set('Access-Control-Allow-Origin', '*');
     return $RouteHandler->solve();
   });
 }
