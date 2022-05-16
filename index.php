@@ -27,6 +27,10 @@ const ROUTES = array(
 
 $router = new Router(new Request);
 
+$router->get('/', function ($request) {
+  echo 'Hello Coder';
+});
+
 foreach (ROUTES as $key => $RouteHandler) {
   $router->get('/' . $key, fn ($request) => $RouteHandler->solve());
 }
