@@ -27,7 +27,7 @@ const ROUTES = array(
 
 $router = new Router(new Request);
 
-$router->get('/', function ($request) {
+$router->get('/question99', function ($request) {
   echo 'Hello Coder';
 });
 
