@@ -7,10 +7,10 @@ class Question_2 implements IQuestion
   public function solve()
   {
     // DB Options.
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'gale_healthcare_db';
+    $host = 'gale-healthcare-db.cpgjcnafbcpk.us-east-1.rds.amazonaws.com';
+    $username = 'admin';
+    $password = 'galehealth';
+    $database = 'gale-healthcare-db';
 
     // Connect to the server and database.
     $connection = mysqli_connect($host, $username, $password, $database);
