@@ -54,6 +54,6 @@ class Question_1 implements IQuestion
       $solution = $solution . ' ' . $replacedWord . $punctuation;
     }
 
-    return $solution;
+    echo $solution;
   }
 }
