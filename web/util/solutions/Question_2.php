@@ -15,8 +15,6 @@ class Question_2 implements IQuestion
     // Connect to the server and database.
     $connection = mysqli_connect($host, $username, $password, $database);
 
-    return 'abcd';
-
     // The first query from the challenge.
     $query1 = "SELECT u.userid, u.username, u.email, group_concat(ph.password SEPARATOR ',') passwords FROM  user u JOIN passwordhistory ph ON ph.userid = u.userid GROUP BY ph.userid;";
 
