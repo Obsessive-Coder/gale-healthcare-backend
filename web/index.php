@@ -29,7 +29,7 @@ const ROUTES = array(
 $app = new Silex\Application();
 
 foreach (ROUTES as $key =>  $RouteHandler) {
-  $app->get('/' . $key, fn ($request, $response) => $RouteHandler->solve());
+  $app->get('/' . $key, fn () => $RouteHandler->solve());
 }
 
 // $app->after(function ($request, $response) {
